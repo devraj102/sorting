@@ -1,0 +1,55 @@
+<div class="row">
+    <div class="col-sm-12">
+      <div class="card">
+          <div class="card-header">
+              Insertion Sort
+              <button (click)="handleClick($event)" type="button">Insertion Sort</button>
+              Insertion Sort
+              <button (click)="resetClick($event)" type="button">Reset</button>
+          </div>
+        <div class="card-body">
+          <span>Time Slider</span>
+          <mat-slider
+          class="example-margin"
+          [disabled]="disabled"
+          [invert]="invert"
+          [max]="max"
+          [min]="min"
+          [step]="step"
+          [thumbLabel]="thumbLabel"
+          [vertical]="vertical"
+          (input)="onTimeSliderChange($event)">
+      </mat-slider>
+          <span>Data Slider</span>
+          <mat-slider
+          class="example-margin"
+          [disabled]="disabled"
+          [invert]="invert"
+          [max]="max"
+          [min]="min"
+          [step]="step"
+          [thumbLabel]="thumbLabel"
+          [vertical]="vertical"
+          (input)="onDataSliderChange($event)">
+        </mat-slider>
+          <ngx-charts-bar-vertical
+          [view]="view"
+          [scheme]="colorScheme"
+          [results]="single"
+          [gradient]="gradient"
+          [xAxis]="showXAxis"
+          [yAxis]="showYAxis"
+          [legend]="showLegend"
+          [showXAxisLabel]="showXAxisLabel"
+          [showYAxisLabel]="showYAxisLabel"
+          [xAxisLabel]="xAxisLabel"
+          [yAxisLabel]="yAxisLabel"
+          (select)="onSelect($event)">
+        </ngx-charts-bar-vertical>
+        </div>
+        <div class="card-footer">
+                footer
+            </div>
+      </div>
+    </div>
+  </div>
